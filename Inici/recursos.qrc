@@ -1,0 +1,11 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource>
+        <file>apagar.png</file>
+        <file>persona.png</file>
+        <file>esp.png</file>
+        <file>val.png</file>
+        <file>ingles.png</file>
+        <file>barra_lateral.ui</file>
+    </qresource>
+</RCC>
