@@ -20,8 +20,8 @@
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
-   <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="0">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
      <widget class="QWidget" name="barra_lateral" native="true">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
@@ -175,11 +175,24 @@
           <string notr="true">background-color: rgb(150, 182, 221);</string>
          </property>
          <property name="text">
-          <string>CURSOS</string>
+          <string>LLISTA</string>
          </property>
         </widget>
        </item>
        <item>
+<<<<<<< HEAD
+        <widget class="QPushButton" name="llista">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(150, 182, 221);</string>
+         </property>
+         <property name="text">
+          <string>NOTES</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+=======
+>>>>>>> 0f4b7c8ca8687727d724b643f74ce18bc8fad893
         <spacer name="verticalSpacer_3">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -246,14 +259,14 @@
       </layout>
      </widget>
     </item>
-    <item row="0" column="1">
+    <item>
      <widget class="Line" name="line">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
      </widget>
     </item>
-    <item row="0" column="2">
+    <item>
      <layout class="QVBoxLayout" name="llista_cursos">
       <item>
        <widget class="QToolBox" name="cursos_2">
@@ -270,7 +283,7 @@
          <enum>QFrame::Plain</enum>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="page_12">
          <property name="geometry">
@@ -278,7 +291,11 @@
            <x>0</x>
            <y>0</y>
            <width>663</width>
+<<<<<<< HEAD
+           <height>500</height>
+=======
            <height>479</height>
+>>>>>>> 0f4b7c8ca8687727d724b643f74ce18bc8fad893
           </rect>
          </property>
          <property name="styleSheet">
@@ -301,7 +318,11 @@
                  <x>0</x>
                  <y>0</y>
                  <width>643</width>
+<<<<<<< HEAD
+                 <height>420</height>
+=======
                  <height>399</height>
+>>>>>>> 0f4b7c8ca8687727d724b643f74ce18bc8fad893
                 </rect>
                </property>
                <attribute name="label">
@@ -416,7 +437,11 @@
            <x>0</x>
            <y>0</y>
            <width>663</width>
+<<<<<<< HEAD
+           <height>500</height>
+=======
            <height>457</height>
+>>>>>>> 0f4b7c8ca8687727d724b643f74ce18bc8fad893
           </rect>
          </property>
          <property name="styleSheet">
@@ -437,7 +462,11 @@
            <x>0</x>
            <y>0</y>
            <width>663</width>
+<<<<<<< HEAD
+           <height>500</height>
+=======
            <height>457</height>
+>>>>>>> 0f4b7c8ca8687727d724b643f74ce18bc8fad893
           </rect>
          </property>
          <property name="styleSheet">
@@ -458,7 +487,11 @@
            <x>0</x>
            <y>0</y>
            <width>663</width>
+<<<<<<< HEAD
+           <height>500</height>
+=======
            <height>457</height>
+>>>>>>> 0f4b7c8ca8687727d724b643f74ce18bc8fad893
           </rect>
          </property>
          <property name="contextMenuPolicy">
@@ -483,7 +516,11 @@
            <x>0</x>
            <y>0</y>
            <width>663</width>
+<<<<<<< HEAD
+           <height>500</height>
+=======
            <height>457</height>
+>>>>>>> 0f4b7c8ca8687727d724b643f74ce18bc8fad893
           </rect>
          </property>
          <property name="styleSheet">
@@ -504,12 +541,15 @@
     </item>
    </layout>
   </widget>
+<<<<<<< HEAD
+=======
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionffdsf">
    <property name="text">
     <string>ffdsf</string>
    </property>
   </action>
+>>>>>>> 0f4b7c8ca8687727d724b643f74ce18bc8fad893
  </widget>
  <resources>
   <include location="../img/recursos.qrc"/>
