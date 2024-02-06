@@ -153,7 +153,7 @@
           <enum>Qt::Vertical</enum>
          </property>
          <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
+          <enum>QSizePolicy::Expanding</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -184,12 +184,25 @@
         </widget>
        </item>
        <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
         <spacer name="verticalSpacer_4">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
          <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
+          <enum>QSizePolicy::Expanding</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -252,7 +265,7 @@
            <x>0</x>
            <y>0</y>
            <width>563</width>
-           <height>344</height>
+           <height>385</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -279,7 +292,7 @@
            <x>0</x>
            <y>0</y>
            <width>563</width>
-           <height>344</height>
+           <height>385</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -306,7 +319,7 @@
            <x>0</x>
            <y>0</y>
            <width>563</width>
-           <height>344</height>
+           <height>385</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -333,7 +346,7 @@
            <x>0</x>
            <y>0</y>
            <width>563</width>
-           <height>344</height>
+           <height>385</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -360,7 +373,7 @@
            <x>0</x>
            <y>0</y>
            <width>563</width>
-           <height>344</height>
+           <height>385</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -400,7 +413,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>27</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>885</width>
+    <width>900</width>
     <height>672</height>
    </rect>
   </property>
@@ -159,7 +159,7 @@
           <enum>Qt::Vertical</enum>
          </property>
          <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
+          <enum>QSizePolicy::Expanding</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -180,16 +180,6 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="xat">
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(150, 182, 221);</string>
-         </property>
-         <property name="text">
-          <string>XAT</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QPushButton" name="llista">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(150, 182, 221);</string>
@@ -200,12 +190,25 @@
         </widget>
        </item>
        <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
         <spacer name="verticalSpacer_2">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
          <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
+          <enum>QSizePolicy::Expanding</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -253,7 +256,7 @@
     <item row="0" column="2">
      <layout class="QVBoxLayout" name="llista_cursos">
       <item>
-       <widget class="QToolBox" name="toolBox">
+       <widget class="QToolBox" name="cursos_2">
         <property name="toolTip">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
@@ -274,8 +277,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>648</width>
-           <height>416</height>
+           <width>663</width>
+           <height>457</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -284,159 +287,136 @@
          <attribute name="label">
           <string>CURS 1</string>
          </attribute>
-         <widget class="QWidget" name="verticalLayoutWidget">
-          <property name="geometry">
-           <rect>
-            <x>180</x>
-            <y>180</y>
-            <width>2</width>
-            <height>2</height>
-           </rect>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_2"/>
-         </widget>
-         <widget class="QWidget" name="verticalLayoutWidget_6">
-          <property name="geometry">
-           <rect>
-            <x>-1</x>
-            <y>-1</y>
-            <width>651</width>
-            <height>451</height>
-           </rect>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_3">
-           <property name="sizeConstraint">
-            <enum>QLayout::SetMaximumSize</enum>
-           </property>
-           <item>
-            <widget class="QToolBox" name="caixaTemaP">
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="currentIndex">
-              <number>0</number>
-             </property>
-             <widget class="QWidget" name="page">
-              <property name="geometry">
-               <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>649</width>
-                <height>377</height>
-               </rect>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QToolBox" name="curs">
+              <property name="currentIndex">
+               <number>1</number>
               </property>
-              <attribute name="label">
-               <string>Tema 1</string>
-              </attribute>
-              <widget class="QWidget" name="gridLayoutWidget">
+              <widget class="QWidget" name="page">
                <property name="geometry">
                 <rect>
-                 <x>9</x>
-                 <y>-1</y>
-                 <width>641</width>
-                 <height>391</height>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>193</width>
+                 <height>104</height>
                 </rect>
                </property>
-               <layout class="QGridLayout" name="gridLayout">
-                <item row="1" column="2">
-                 <widget class="QPushButton" name="pushButton_3">
-                  <property name="styleSheet">
-                   <string notr="true">background-color: rgb(150, 182, 221);</string>
-                  </property>
-                  <property name="text">
-                   <string>Editar</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="1">
-                 <widget class="QLabel" name="label_3">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color: rgb(150, 182, 221);</string>
-                  </property>
-                  <property name="text">
-                   <string>Document </string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="2">
-                 <widget class="QPushButton" name="pushButton_2">
-                  <property name="styleSheet">
-                   <string notr="true">background-color: rgb(150, 182, 221);
-</string>
-                  </property>
-                  <property name="text">
-                   <string>Editar</string>
-                  </property>
-                 </widget>
-                </item>
+               <attribute name="label">
+                <string>Tema1</string>
+               </attribute>
+               <layout class="QGridLayout" name="gridLayout_3">
                 <item row="0" column="0">
-                 <widget class="QLabel" name="label_2">
-                  <property name="text">
-                   <string>Icono</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="2">
-                 <widget class="QPushButton" name="pushButton_4">
-                  <property name="styleSheet">
-                   <string notr="true">background-color: rgb(150, 182, 221);</string>
-                  </property>
-                  <property name="text">
-                   <string>Editar Tema</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="1">
-                 <widget class="QLabel" name="label_4">
-                  <property name="styleSheet">
-                   <string notr="true">background-color: rgb(150, 182, 221);</string>
-                  </property>
-                  <property name="text">
-                   <string>Entrega</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="0">
-                 <widget class="QLabel" name="label_5">
-                  <property name="text">
-                   <string>Icono</string>
-                  </property>
-                 </widget>
+                 <layout class="QGridLayout" name="gridLayout">
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="label_4">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(255, 255, 255);</string>
+                    </property>
+                    <property name="text">
+                     <string>Icono</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QLabel" name="label_3">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(255, 255, 255);</string>
+                    </property>
+                    <property name="text">
+                     <string>Entrega</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QLabel" name="label">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(255, 255, 255);</string>
+                    </property>
+                    <property name="text">
+                     <string>Document</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_2">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(255, 255, 255);</string>
+                    </property>
+                    <property name="text">
+                     <string>Icono</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="2">
+                   <widget class="QPushButton" name="pushButton_2">
+                    <property name="toolTip">
+                     <string>background-color: rgb(255, 255, 255);</string>
+                    </property>
+                    <property name="text">
+                     <string>Editar</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="2">
+                   <widget class="QPushButton" name="pushButton">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(255, 255, 255);</string>
+                    </property>
+                    <property name="text">
+                     <string>Editar</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="2">
+                   <widget class="QPushButton" name="pushButton_3">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+                    </property>
+                    <property name="text">
+                     <string>editar curs</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
                 </item>
                </layout>
               </widget>
+              <widget class="QWidget" name="page_3">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>643</width>
+                 <height>377</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Tema 2</string>
+               </attribute>
+              </widget>
              </widget>
-             <widget class="QWidget" name="page_3">
-              <property name="geometry">
-               <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>649</width>
-                <height>377</height>
-               </rect>
-              </property>
-              <attribute name="label">
-               <string>Tema 2</string>
-              </attribute>
-             </widget>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
         </widget>
         <widget class="QWidget" name="page_2">
          <property name="geometry">
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>648</width>
-           <height>416</height>
+           <width>98</width>
+           <height>28</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -445,25 +425,19 @@
          <attribute name="label">
           <string>CURS 2</string>
          </attribute>
-         <widget class="QWidget" name="verticalLayoutWidget_2">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>-10</y>
-            <width>491</width>
-            <height>381</height>
-           </rect>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_5"/>
-         </widget>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_5"/>
+          </item>
+         </layout>
         </widget>
         <widget class="QWidget" name="page_9">
          <property name="geometry">
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>648</width>
-           <height>416</height>
+           <width>98</width>
+           <height>28</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -472,25 +446,19 @@
          <attribute name="label">
           <string>CURS 3</string>
          </attribute>
-         <widget class="QWidget" name="verticalLayoutWidget_3">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>-10</y>
-            <width>491</width>
-            <height>381</height>
-           </rect>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_6"/>
-         </widget>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_6"/>
+          </item>
+         </layout>
         </widget>
         <widget class="QWidget" name="page_10">
          <property name="geometry">
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>648</width>
-           <height>416</height>
+           <width>98</width>
+           <height>28</height>
           </rect>
          </property>
          <property name="contextMenuPolicy">
@@ -503,25 +471,19 @@
          <attribute name="label">
           <string>CURS 4</string>
          </attribute>
-         <widget class="QWidget" name="verticalLayoutWidget_4">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>-10</y>
-            <width>491</width>
-            <height>381</height>
-           </rect>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_7"/>
-         </widget>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_7"/>
+          </item>
+         </layout>
         </widget>
         <widget class="QWidget" name="page_11">
          <property name="geometry">
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>648</width>
-           <height>416</height>
+           <width>98</width>
+           <height>28</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -530,17 +492,11 @@
          <attribute name="label">
           <string>CURS 5</string>
          </attribute>
-         <widget class="QWidget" name="verticalLayoutWidget_5">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>-10</y>
-            <width>491</width>
-            <height>381</height>
-           </rect>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_8"/>
-         </widget>
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_8"/>
+          </item>
+         </layout>
         </widget>
        </widget>
       </item>
@@ -553,8 +509,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>885</width>
-     <height>27</height>
+     <width>900</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>
