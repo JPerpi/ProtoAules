@@ -2,7 +2,8 @@ import sys
 import os
 
 from PySide6 import QtWidgets
-from PySide6.QtWidgets import QMessageBox
+from PySide6.QtWidgets import QMessageBox,QMenu
+from PySide6.QtGui import QAction
 from PySide6.QtCore import Qt, QCoreApplication
 from PySide6.QtUiTools import QUiLoader
 from recursos_rc import *
@@ -49,9 +50,30 @@ class MainWindow(QtWidgets.QMainWindow):
         self.alumne_ini.sortir.clicked.connect(self.show_login)
         self.profe_ini.sortir.clicked.connect(self.show_login)
 
+        #Funcions login
+        self.login_screen.password.returnPressed.connect(self.accio_login)
+
+        #Funcions pantalla alumne
+
+
+
+
+        #Funcions pantalla profe
+        menu=QMenu(self)
+        act1=QAction("Pujar tramessa",self)
+        act2=QAction("Editar tramessa",self)
+        act3=QAction("Eliminar tramessa",self)
+        menu.addAction(act1)
+        menu.addAction(act2)
+        menu.addAction(act3)
+        self.profe_ini.tool_profesor.setMenu(menu)
+
         # Volver al login
     def show_login(self):
         self.stacked_widget.setCurrentIndex(0)
+        self.login_screen.password.clear()
+        self.login_screen.username.clear()
+        self.login_screen.username.setFocus()
 
     def accio_login(self):
 

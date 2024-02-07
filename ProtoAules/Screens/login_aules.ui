@@ -315,6 +315,9 @@ background-color: rgb(153, 193, 241);</string>
          <property name="echoMode">
           <enum>QLineEdit::Password</enum>
          </property>
+         <property name="placeholderText">
+          <string>Contraseña</string>
+         </property>
         </widget>
         <widget class="QLineEdit" name="username">
          <property name="geometry">
@@ -336,6 +339,12 @@ background-color: rgb(153, 193, 241);</string>
          </property>
          <property name="maxLength">
           <number>9</number>
+         </property>
+         <property name="placeholderText">
+          <string>Usuario</string>
+         </property>
+         <property name="clearButtonEnabled">
+          <bool>false</bool>
          </property>
         </widget>
         <widget class="QPushButton" name="button_login">

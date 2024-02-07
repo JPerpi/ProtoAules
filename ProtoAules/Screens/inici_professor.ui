@@ -356,16 +356,6 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="1" column="2">
-                   <widget class="QPushButton" name="pushButton_2">
-                    <property name="toolTip">
-                     <string>background-color: rgb(255, 255, 255);</string>
-                    </property>
-                    <property name="text">
-                     <string>Editar</string>
-                    </property>
-                   </widget>
-                  </item>
                   <item row="2" column="2">
                    <widget class="QPushButton" name="pushButton_3">
                     <property name="styleSheet">
@@ -386,7 +376,7 @@
                      <string>Editar</string>
                     </property>
                     <property name="popupMode">
-                     <enum>QToolButton::MenuButtonPopup</enum>
+                     <enum>QToolButton::InstantPopup</enum>
                     </property>
                     <property name="toolButtonStyle">
                      <enum>Qt::ToolButtonTextOnly</enum>
@@ -399,6 +389,13 @@
                     </property>
                    </widget>
                   </item>
+                  <item row="1" column="2">
+                   <widget class="QToolButton" name="toolButton">
+                    <property name="text">
+                     <string>Editar</string>
+                    </property>
+                   </widget>
+                  </item>
                  </layout>
                 </item>
                </layout>
@@ -408,8 +405,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>100</width>
-                 <height>30</height>
+                 <width>643</width>
+                 <height>324</height>
                 </rect>
                </property>
                <attribute name="label">
@@ -427,8 +424,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>663</width>
+           <height>416</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -448,8 +445,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>663</width>
+           <height>416</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -469,8 +466,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>663</width>
+           <height>416</height>
           </rect>
          </property>
          <property name="contextMenuPolicy">
@@ -494,8 +491,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>663</width>
+           <height>416</height>
           </rect>
          </property>
          <property name="styleSheet">
