@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>900</width>
-    <height>672</height>
+    <width>836</width>
+    <height>795</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -170,12 +170,12 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="cursos">
+        <widget class="QPushButton" name="Notes">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(150, 182, 221);</string>
          </property>
          <property name="text">
-          <string>CURSOS</string>
+          <string>Notes</string>
          </property>
         </widget>
        </item>
@@ -185,7 +185,7 @@
           <string notr="true">background-color: rgb(150, 182, 221);</string>
          </property>
          <property name="text">
-          <string>LLISTA</string>
+          <string>Llista</string>
          </property>
         </widget>
        </item>
@@ -258,7 +258,7 @@
       <item>
        <widget class="QToolBox" name="cursos_2">
         <property name="toolTip">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">selection-background-color: rgb(170, 0, 0);</string>
@@ -277,8 +277,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>663</width>
-           <height>416</height>
+           <width>599</width>
+           <height>539</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -292,6 +292,9 @@
            <layout class="QVBoxLayout" name="verticalLayout_2">
             <item>
              <widget class="QToolBox" name="curs">
+              <property name="toolTip">
+               <string/>
+              </property>
               <property name="currentIndex">
                <number>0</number>
               </property>
@@ -300,8 +303,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>643</width>
-                 <height>324</height>
+                 <width>579</width>
+                 <height>447</height>
                 </rect>
                </property>
                <attribute name="label">
@@ -310,60 +313,58 @@
                <layout class="QGridLayout" name="gridLayout_3">
                 <item row="0" column="0">
                  <layout class="QGridLayout" name="gridLayout">
-                  <item row="1" column="0">
-                   <widget class="QLabel" name="label_4">
-                    <property name="styleSheet">
-                     <string notr="true">background-color: rgb(255, 255, 255);</string>
-                    </property>
-                    <property name="text">
-                     <string>Icono</string>
-                    </property>
-                   </widget>
-                  </item>
                   <item row="1" column="1">
-                   <widget class="QLabel" name="label_3">
+                   <widget class="QLabel" name="label2">
+                    <property name="maximumSize">
+                     <size>
+                      <width>490</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::RightToLeft</enum>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">background-color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="text">
-                     <string>Entrega</string>
+                     <string/>
                     </property>
                    </widget>
                   </item>
-                  <item row="0" column="1">
-                   <widget class="QLabel" name="label">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">background-color: rgb(255, 255, 255);</string>
-                    </property>
+                  <item row="1" column="2">
+                   <widget class="QToolButton" name="tool_profesor2">
                     <property name="text">
-                     <string>Document</string>
+                     <string>Editar</string>
+                    </property>
+                    <property name="popupMode">
+                     <enum>QToolButton::InstantPopup</enum>
+                    </property>
+                    <property name="toolButtonStyle">
+                     <enum>Qt::ToolButtonTextOnly</enum>
                     </property>
                    </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <spacer name="verticalSpacer_4">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
                   </item>
                   <item row="0" column="0">
-                   <widget class="QLabel" name="label_2">
+                   <widget class="QLabel" name="ico1">
                     <property name="styleSheet">
                      <string notr="true">background-color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="text">
-                     <string>Icono</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="2">
-                   <widget class="QPushButton" name="pushButton_3">
-                    <property name="styleSheet">
-                     <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-                    </property>
-                    <property name="text">
-                     <string>editar curs</string>
+                     <string>         </string>
                     </property>
                    </widget>
                   </item>
@@ -389,10 +390,31 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="1" column="2">
-                   <widget class="QToolButton" name="toolButton">
+                  <item row="0" column="1">
+                   <widget class="QLabel" name="label">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(255, 255, 255);</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Plain</enum>
+                    </property>
                     <property name="text">
-                     <string>Editar</string>
+                     <string/>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -405,8 +427,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>643</width>
-                 <height>324</height>
+                 <width>579</width>
+                 <height>447</height>
                 </rect>
                </property>
                <attribute name="label">
@@ -424,8 +446,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>663</width>
-           <height>416</height>
+           <width>599</width>
+           <height>539</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -445,8 +467,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>663</width>
-           <height>416</height>
+           <width>599</width>
+           <height>539</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -466,8 +488,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>663</width>
-           <height>416</height>
+           <width>599</width>
+           <height>539</height>
           </rect>
          </property>
          <property name="contextMenuPolicy">
@@ -491,8 +513,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>663</width>
-           <height>416</height>
+           <width>599</width>
+           <height>539</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -518,7 +540,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>900</width>
+     <width>836</width>
      <height>27</height>
     </rect>
    </property>

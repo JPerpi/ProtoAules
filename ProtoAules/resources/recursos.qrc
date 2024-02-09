@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="prefijoNuevo">
+    <file>png/global.png</file>
+    <file>png/file.png</file>
     <file>png/error.png</file>
     <file>png/val.png</file>
     <file>png/persona.png</file>

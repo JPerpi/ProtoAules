@@ -39,7 +39,7 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
          <item>
-          <widget class="QPushButton" name="perfil_4">
+          <widget class="QPushButton" name="perfil">
            <property name="enabled">
             <bool>true</bool>
            </property>
@@ -80,7 +80,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="idioma1_4">
+          <widget class="QPushButton" name="idioma_esp">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -102,7 +102,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="idioma2_4">
+          <widget class="QPushButton" name="idioma_val">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -124,7 +124,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="idioma3_4">
+          <widget class="QPushButton" name="idioma_eng">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -164,7 +164,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="cursos_6">
+        <widget class="QPushButton" name="cursos">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(150, 182, 221);</string>
          </property>
@@ -174,7 +174,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="llista_3">
+        <widget class="QPushButton" name="notes">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(150, 182, 221);</string>
          </property>
@@ -213,7 +213,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="apagar_3">
+        <widget class="QPushButton" name="sortir">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
@@ -277,7 +277,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="../img/recursos.qrc"/>
+  <include location="../resources/recursos.qrc"/>
  </resources>
  <connections/>
 </ui>

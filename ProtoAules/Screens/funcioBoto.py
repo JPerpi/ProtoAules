@@ -29,11 +29,6 @@ class DialogoPersonalizado(QDialog):
                 selectedFilter="Documents de text (*.txt)")
             fitxer = finestra_dialeg[0]
         
-       
-       
-            
-
-    
 
 class VentanaPrincipal(QMainWindow):
     def __init__(self):
