@@ -1,14 +1,14 @@
 import sys
 import os
-
+import json
 from PySide6 import QtWidgets
 from PySide6.QtWidgets import QMessageBox,QMenu, QFileDialog
 from PySide6.QtGui import QAction
 from PySide6.QtCore import Qt, QCoreApplication
 from PySide6.QtUiTools import QUiLoader
 from recursos_rc import *
-import firebase_admin
-from firebase_admin import credentials, firestore
+#import firebase_admin
+#from firebase_admin import credentials, firestore
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -16,12 +16,12 @@ class MainWindow(QtWidgets.QMainWindow):
         super(MainWindow, self).__init__()
 
         # Base de datos Firebase
-        cred_path = os.path.join(os.path.dirname(
-            __file__), "resources/credential.json")
-
-        cred = credentials.Certificate(cred_path)
-        firebase_admin.initialize_app(cred)
-        self.db = firestore.client()
+  #      cred_path = os.path.join(os.path.dirname(
+   #         __file__), "resources/credential.json")
+#
+ #       cred = credentials.Certificate(cred_path)
+  #      firebase_admin.initialize_app(cred)
+   #     self.db = firestore.client()
 
         # Inicializar el cargador de UI
         loader = QUiLoader()
@@ -93,45 +93,35 @@ class MainWindow(QtWidgets.QMainWindow):
     def accio_login(self):
 
        # Professor
-        nombre_user = self.login_screen.username.text()
-        if not (len(nombre_user) >= 2 and nombre_user[-1].isalpha() and nombre_user[:-1].isalnum()):
-            users_db = self.db.collection("usuarios")
-            query = users_db.where(field_path="username",
-                                   op_string="==", value=nombre_user)
-            result = query.get()
-            if result:
-                # comp_pass
-                pass_user = self.login_screen.password.text()
-                users_db = self.db.collection("usuarios")
-                query = users_db.where(
-                    field_path="password", op_string="==", value=pass_user)
-                result_pass = query.get()
-                if result_pass:
-                    self.stacked_widget.setCurrentIndex(1)
-                else:
-                    msg_error = "El nombre de usuario o contraseña son incorrectos."
-                    QMessageBox.information(
-                        self, "Error al iniciar sesión", msg_error)
+        nombre_user = self.login_screen.username.text() 
+       
+        pass_user = self.login_screen.password.text() 
+       
 
+        if not nombre_user[-1].isalpha():
+            
+            with open('alumnes.json') as json_file:
+                    data = json.load(json_file)
+            for usuario in data:
+                if usuario["username"] == nombre_user and usuario["password"] == pass_user:    
+                    self.stacked_widget.setCurrentIndex(2)
+                    return
+                
+            msg_error = "El nombre de usuario o contraseña son incorrectos."
+            QMessageBox.information(self, "Error al iniciar sesión", msg_error)
         # Alumne
         else:
-            users_db = self.db.collection("usuarios")
-            query = users_db.where(field_path="username",
-                                   op_string="==", value=nombre_user)
-            result = query.get()
-            if result:
-                # comp_pass
-                pass_user = self.login_screen.password.text()
-                users_db = self.db.collection("usuarios")
-                query = users_db.where(
-                    field_path="password", op_string="==", value=pass_user)
-                result_pass = query.get()
-                if result_pass:
+            with open('professors.json') as json_file:
+                    data2 = json.load(json_file)
+            for usuario in data2:
+                if usuario["username"] == nombre_user and usuario["password"] == pass_user:
                     self.stacked_widget.setCurrentIndex(2)
-                else:
-                    msg_error = "El nombre de usuario o contraseña son incorrectos."
-                    QMessageBox.information(
-                        self, "Error al iniciar sesión", msg_error)
+                    return
+                    
+                
+            msg_error = "El nombre de usuario o contraseña son incorrectos."
+            QMessageBox.information(self, "Error al iniciar sesión", msg_error)
+               
 
     def show_llista(self):
          self.stacked_widget.setCurrentIndex(3)
