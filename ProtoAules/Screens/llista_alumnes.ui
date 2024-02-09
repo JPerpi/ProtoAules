@@ -169,7 +169,7 @@
           <string notr="true">background-color: rgb(150, 182, 221);</string>
          </property>
          <property name="text">
-          <string>CURSOS</string>
+          <string>Cursos</string>
          </property>
         </widget>
        </item>
@@ -179,7 +179,7 @@
           <string notr="true">background-color: rgb(150, 182, 221);</string>
          </property>
          <property name="text">
-          <string>NOTES</string>
+          <string>Notes</string>
          </property>
         </widget>
        </item>
