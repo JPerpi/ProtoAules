@@ -7,6 +7,11 @@ from PySide6.QtGui import QAction
 from PySide6.QtCore import Qt, QCoreApplication
 from PySide6.QtUiTools import QUiLoader
 from recursos_rc import *
+import pandas as pd 
+import datapane as dp 
+import matplotlib
+
+
 #import firebase_admin
 #from firebase_admin import credentials, firestore
 
@@ -24,7 +29,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         # Inicialitzar el carregador de UI
         loader = QUiLoader()
-
+        self.nombre_user=""
         # Cargar pantallas:
         self.login_screen = loader.load(os.path.join(
             os.path.dirname(__file__), "Screens/login_aules.ui"), self)
@@ -93,16 +98,16 @@ class MainWindow(QtWidgets.QMainWindow):
     #Comprobació d'inici de sessió
     def accio_login(self):
 
-        nombre_user = self.login_screen.username.text() 
+        self.nombre_user = self.login_screen.username.text() 
        
         pass_user = self.login_screen.password.text() 
        
-        if not nombre_user[-1].isalpha():
+        if not self.nombre_user[-1].isalpha():
             
             with open('alumnes.json') as json_file:
                     data = json.load(json_file)
             for usuario in data:
-                if usuario["username"] == nombre_user and usuario["password"] == pass_user:    
+                if usuario["username"] == self.nombre_user and usuario["password"] == pass_user:    
                     self.stacked_widget.setCurrentIndex(1)
                     return
 
@@ -112,7 +117,7 @@ class MainWindow(QtWidgets.QMainWindow):
             with open('professors.json') as json_file:
                     data2 = json.load(json_file)
             for usuario in data2:
-                if usuario["username"] == nombre_user and usuario["password"] == pass_user:
+                if usuario["username"] == self.nombre_user and usuario["password"] == pass_user:
                     self.stacked_widget.setCurrentIndex(2)
                     return
                     
@@ -126,6 +131,29 @@ class MainWindow(QtWidgets.QMainWindow):
             doc_nom=os.path.basename(path_doc)
             self.profe_ini.label.setText(doc_nom)
     
+    def informeAlumne(self):
+
+        base_path= os.path.dirname(__file__)
+        json_path= os.path.join(base_path,"alumnes.json")
+        f = open(json_path)
+
+        datos=json.load(f)
+        for alumne in datos:
+            if alumne["username"]== self.nombre_user:
+
+                data2=json.dumps(alumne)
+                print(data2)
+
+                df=pd.read_json(data2)
+
+                tarta_matplotlib = df.plot.bar(y=['Notes'], ylabel="")
+                tarta_datapane = dp.Plot(tarta_matplotlib)
+
+                report = dp.Report(tarta_datapane)
+                report_path = os.path.join(base_path, "json.html")
+                report.save(path=report_path, open=True)
+        f.close()
+
     # Per a canviar la icona depenent del tipus d'arxiu
     def canvi_icona(self):
         archivo = self.label.text().split(": ")[1]
