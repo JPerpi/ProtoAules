@@ -9,23 +9,11 @@ from PySide6.QtUiTools import QUiLoader
 from recursos_rc import *
 import pandas as pd 
 import datapane as dp 
-import matplotlib
 
-
-#import firebase_admin
-#from firebase_admin import credentials, firestore
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
-
-        # Base de datos Firebase
-        #      cred_path = os.path.join(os.path.dirname(
-        #         __file__), "resources/credential.json")
-        #
-        #       cred = credentials.Certificate(cred_path)
-        #      firebase_admin.initialize_app(cred)
-        #     self.db = firestore.client()
 
         # Inicialitzar el carregador de UI
         loader = QUiLoader()
@@ -61,9 +49,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.login_screen.password.returnPressed.connect(self.accio_login)
 
         #Funcions pantalla alumne:
+        self.alumne_ini.notes.clicked.connect(self.informeAlumne)
 
         #Funcions pantalla profe:
         self.profe_ini.llista.clicked.connect(self.show_llista)
+        self.profe_ini.Notes.clicked.connect(self.informeProfe)
         self.profe_ini.ico1.setVisible(False)
         
         menu=QMenu(self)
@@ -99,12 +89,12 @@ class MainWindow(QtWidgets.QMainWindow):
     def accio_login(self):
 
         self.nombre_user = self.login_screen.username.text() 
-       
+        base_path= os.path.dirname(__file__)
         pass_user = self.login_screen.password.text() 
        
         if not self.nombre_user[-1].isalpha():
             
-            with open('alumnes.json') as json_file:
+            with open(os.path.join(base_path,"resources/alumnes.json")) as json_file:
                     data = json.load(json_file)
             for usuario in data:
                 if usuario["username"] == self.nombre_user and usuario["password"] == pass_user:    
@@ -114,7 +104,7 @@ class MainWindow(QtWidgets.QMainWindow):
             msg_error = "El nombre de usuario o contraseña son incorrectos."
             QMessageBox.information(self, "Error al iniciar sesión", msg_error)
         else:
-            with open('professors.json') as json_file:
+            with open(os.path.join(base_path,"resources/professors.json")) as json_file:
                     data2 = json.load(json_file)
             for usuario in data2:
                 if usuario["username"] == self.nombre_user and usuario["password"] == pass_user:
@@ -134,7 +124,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def informeAlumne(self):
 
         base_path= os.path.dirname(__file__)
-        json_path= os.path.join(base_path,"alumnes.json")
+        json_path= os.path.join(base_path,"resources/alumnes.json")
         f = open(json_path)
 
         datos=json.load(f)
@@ -142,7 +132,7 @@ class MainWindow(QtWidgets.QMainWindow):
             if alumne["username"]== self.nombre_user:
 
                 data2=json.dumps(alumne)
-                print(data2)
+                
 
                 df=pd.read_json(data2)
 
@@ -150,9 +140,32 @@ class MainWindow(QtWidgets.QMainWindow):
                 tarta_datapane = dp.Plot(tarta_matplotlib)
 
                 report = dp.Report(tarta_datapane)
-                report_path = os.path.join(base_path, "json.html")
+                report_path = os.path.join(base_path, "resources/Informe alumne.html")
                 report.save(path=report_path, open=True)
         f.close()
+
+    def informeProfe(self):
+
+        base_path= os.path.dirname(__file__)
+        json_path= os.path.join(base_path,"resources/professors.json")
+        f = open(json_path)
+
+        datos=json.load(f)
+        for professor in datos:
+            if professor["username"]== self.nombre_user:
+
+                data2=json.dumps(professor)
+                
+
+                df=pd.read_json(data2)
+
+                tarta_matplotlib = df.plot.bar(y=['alumnes'], ylabel="")
+                tarta_datapane = dp.Plot(tarta_matplotlib)
+
+                report = dp.Report(tarta_datapane)
+                report_path = os.path.join(base_path, "resources/Informe professor.html")
+                report.save(path=report_path, open=True)
+            f.close()
 
     # Per a canviar la icona depenent del tipus d'arxiu
     def canvi_icona(self):

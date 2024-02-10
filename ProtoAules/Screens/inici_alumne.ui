@@ -164,7 +164,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="button_notes">
+        <widget class="QPushButton" name="notes">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(150, 182, 221);</string>
          </property>
@@ -255,7 +255,7 @@
            <x>0</x>
            <y>0</y>
            <width>563</width>
-           <height>428</height>
+           <height>398</height>
           </rect>
          </property>
          <property name="styleSheet">

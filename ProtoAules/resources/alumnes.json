@@ -1,0 +1,40 @@
+[
+    {
+        "Nombre":"Ruben",
+        "Notes":{
+            "AD":"8",
+            "DI":"7",
+            "PMDM":"6",
+            "PSP":"6",
+            "SGE":"8"
+        },
+        "password":"alt12345",
+        "username":"10014033"
+    },
+
+    {
+        "Nombre":"Frank",
+        "Notes":{
+            "AD":"7",
+            "DI":"6",
+            "PMDM":"7",
+            "PSP":"7",
+            "SGE":"9"
+        },
+        "password":"car12345",
+        "username":"10804210"
+    },
+
+    {
+        "Nombre":"Juan",
+        "Notes":{
+            "AD":"8",
+            "DI":"8",
+            "PMDM":"9",
+            "PSP":"9",
+            "SGE":"6"
+        },
+        "password":"jupepi95",
+        "username":"12345678"
+    }
+]

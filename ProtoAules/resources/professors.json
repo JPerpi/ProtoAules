@@ -1,0 +1,34 @@
+[
+    {
+        "Nombre":"Alicia",
+        "password":"gon12345",
+        "username":"26761169G",
+        "alumnes":{
+            "Ruben":"8",
+            "Frank":"9",
+            "Juan": "6"
+        }
+    },
+
+    {
+        "Nombre":"Ferran",
+        "password":"cun12345",
+        "username":"25791104P",
+        "alumnes":{
+            "Ruben":"7",
+            "Frank":"6",
+            "Juan": "8"
+        }
+    },
+
+    {
+        "Nombre":"Alfredo",
+        "password":"12345678",
+        "username":"12345678A",
+        "alumnes":{
+            "Ruben":"6",
+            "Frank":"7",
+            "Juan": "9"
+        }
+    }
+]
