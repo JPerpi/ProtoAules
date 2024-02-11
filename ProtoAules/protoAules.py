@@ -177,6 +177,22 @@ class MainWindow(QtWidgets.QMainWindow):
         else:
             self.ico1.setText("Hola soc un random")
 
+
+
+    def agafarNoms():
+        base_path= os.path.dirname(__file__)
+        json_path= os.path.join(base_path,"resources/alumnes.json")
+        f = open(json_path)
+        llistaAlumnes=[]
+        datos=json.load(f)
+        for alumne in datos:
+        
+            llistaAlumnes.append(alumne["Nombre"])
+            return llistaAlumnes
+
+        f.close()
+
+        
 def main():
     QCoreApplication.setAttribute(Qt.AA_ShareOpenGLContexts)
     app = QtWidgets.QApplication(sys.argv)
