@@ -1,0 +1,49 @@
+[
+    {
+        "Nombre":"Alicia",
+        "password":"gon12345",
+        "username":"12345678A",
+        "alumnes":{
+            "Ruben":"8",
+            "Frank":"9",
+            "Juan": "6"
+        },
+        "asignatura": "Sistemes de Gestio Empresarial"
+    },
+
+    {
+        "Nombre":"Ferran",
+        "password":"cun12345",
+        "username":"12345678F",
+        "alumnes":{
+            "Ruben":"7",
+            "Frank":"6",
+            "Juan": "8"
+        },
+        "asignatura": "Desenrotllament d'Interficies"
+    },
+
+    {
+        "Nombre":"Alfredo",
+        "password":"mur12345",
+        "username":"12345678J",
+        "alumnes":{
+            "Ruben":"6",
+            "Frank":"7",
+            "Juan": "9"
+        },
+        "asignatura": "Programacio Multimedia i Dispositius Mobils"
+    },
+
+    {
+        "Nombre":"Samuel",
+        "password":"mas12345",
+        "username":"12345678S",
+        "alumnes":{
+            "Ruben":"8",
+            "Frank":"7",
+            "Juan": "9"
+        },
+        "asignatura": "Acces a Dades"
+    }
+]
